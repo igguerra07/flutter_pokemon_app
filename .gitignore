@@ -12,6 +12,9 @@ build/
 coverage/
 lib/generated_plugin_registrant.dart
 
+# Generated Files (get_it)
+*.config.dart
+
 # Android related
 **/android/**/gradle-wrapper.jar
 **/android/.gradle
