@@ -10,6 +10,13 @@ class AppWidget extends StatefulWidget {
 class _AppWidgetState extends State<AppWidget> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return const MaterialApp(
+      title: "PokeApp",
+      home: Scaffold(
+        body: Center(
+          child: Text("PokeApp"),
+        ),
+      ),
+    );
   }
 }
