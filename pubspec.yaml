@@ -1,0 +1,41 @@
+name: pokemon_app
+description: A new Flutter project.
+
+publish_to: 'none' 
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Dependency Injection (Service locator)
+  get_it: ^7.2.0
+  injectable: ^1.5.0
+
+  # Funcional Programming (Eitther class)
+  dartz: ^0.10.0
+
+  # Networking
+  dio: ^4.0.1
+
+  # Equality Classes
+  equatable: ^2.0.3
+
+  # State Management
+  flutter_bloc: ^8.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^1.0.0
+  build_runner: ^2.1.4
+
+  injectable_generator: ^1.5.2
+
+flutter:
+  uses-material-design: true
