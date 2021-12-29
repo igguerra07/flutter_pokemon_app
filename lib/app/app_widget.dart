@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pokemon_app/app/routes/routes.dart';
 
 class AppWidget extends StatefulWidget {
   const AppWidget({Key? key}) : super(key: key);
@@ -10,13 +11,11 @@ class AppWidget extends StatefulWidget {
 class _AppWidgetState extends State<AppWidget> {
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       title: "PokeApp",
-      home: Scaffold(
-        body: Center(
-          child: Text("PokeApp"),
-        ),
-      ),
+      debugShowCheckedModeBanner: false,
+      initialRoute: RoutesConstants.initial,
+      onGenerateRoute: (settings) => RoutesGenerator.generateRoutes(settings),
     );
   }
 }
