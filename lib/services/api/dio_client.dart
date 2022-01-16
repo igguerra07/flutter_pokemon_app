@@ -1,13 +1,17 @@
+import 'dart:convert';
 import 'package:dio/dio.dart';
-import 'package:pokemon_app/app/api/api_client.dart';
+import 'package:pokemon_app/services/services.dart';
 
 class DioClient implements ApiClient {
   final Dio _dio;
+  final String baseUrl;
 
-  DioClient(this._dio) {
+  DioClient(this._dio, this.baseUrl) {
+    _dio.options.baseUrl = baseUrl;
+
     _dio.options.headers = {
-      'Content-Type': 'application/json',
       'Accept': 'application/json',
+      'Content-Type': 'application/json',
     };
 
     _dio.interceptors
@@ -20,6 +24,6 @@ class DioClient implements ApiClient {
     Map<String, dynamic> queryParams = const {},
   }) async {
     final response = await _dio.get(path, queryParameters: queryParams);
-    return response;
+    return json.encode(response.data);
   }
 }

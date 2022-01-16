@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:pokemon_app/app/pages/home/home_page.dart';
+import 'package:pokemon_app/app/modules/home/home_page.dart';
 import 'package:pokemon_app/app/routes/routes_constants.dart';
 
 class RoutesGenerator {
  static final _routes = {
-    RoutesConstants.initial: (context) => const HomePage(),
-    RoutesConstants.home: (context) => const HomePage(),
+    RoutesConstants.initial: (context) => HomePage(),
+    RoutesConstants.home: (context) => HomePage(),
   };
 
   static Route<dynamic>? generateRoutes(RouteSettings settings) {
