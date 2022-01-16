@@ -4,8 +4,8 @@ import 'package:pokemon_app/app/routes/routes_constants.dart';
 
 class RoutesGenerator {
  static final _routes = {
-    RoutesConstants.initial: (context) => const HomePage(),
-    RoutesConstants.home: (context) => const HomePage(),
+    RoutesConstants.initial: (context) => HomePage(),
+    RoutesConstants.home: (context) => HomePage(),
   };
 
   static Route<dynamic>? generateRoutes(RouteSettings settings) {
